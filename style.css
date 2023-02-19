@@ -1,0 +1,60 @@
+body {
+  background-color: ffffff;
+  color: #0d8fcd;
+  background: url(https://cdn.pixabay.com/photo/2016/08/05/17/31/coffee-1572739__340.png) no-repeat;
+  background-position: 150% 70%;
+  background-size: 
+}
+
+h1 {
+  font-size: 36px;
+  font-family: Helvetica, Calibri, sans-serif;
+  line-height: 0.5;
+}
+
+h2 {
+  font-size: 30px;
+  font-family: Helvetica, sans-serif;
+  line-height: 0.5;
+  margin-left: 12px;
+}
+
+h3 {
+  font-size: 20px;
+  font-family: Calibri, Helvetica, sans-serif;
+  line-height: 0.5;
+  margin-left: 12px;
+}
+
+p {
+  color: #000000;
+  font-size: 16px;
+  font-family: Georgia, Garamond, serif;
+  line-height: 0.3; 
+  margin-left: 12px;
+}
+
+.header {
+  background-color: #0d8fcd;
+  color: #ffffff;
+  padding-left: 10px;
+  border: 3px solid #000000;
+  margin-left: 0px;
+}
+
+.education {
+  margin-bottom: 3em;
+}
+
+.professional-experience {
+
+}
+
+ul {
+  color: #000000;
+  font-size: 16px;
+  font-family: Georgia, Garamond, serif;
+  margin-bottom: 1.5em;
+}
+
+
