@@ -1,12 +1,13 @@
 body {
-  background-color: #ffffff;
-  color: #0d8fcd;
-  background-image: url(https://cdn.pixabay.com/photo/2022/09/08/17/15/cafe-7441426_960_720.png);
+  color: #000000;
+  background-color: #f9f9f9;
+  white-space: nowrap;
+  background-image: URL("https://cdn.pixabay.com/photo/2017/08/16/11/47/drawing-2647512_960_720.jpg");
+  background-position: 500px 0px;
   background-repeat: no-repeat;
-  background-size: 200px 200px;
-  background-position: 370px 330px;
+  background-size: contain;
+  background-attachment: fixed;
 }
-
 
 h1 {
   font-size: 36px;
@@ -45,16 +46,47 @@ ul {
 }
 
 header {
-  background-color: #0d8fcd;
-  color: #ffffff;
-  padding-left: 6px;
-  border: 3px solid #000000;
   width: 540px;
-  margin-left: 0px;
-}
+  margin-left: 10px;
+  padding-top: 3px;
+} 
 
 figure {
   margin:0;
+}
+
+#coffee-cup {
+  position: absolute;
+  top: 290px;
+  left: 350px;
+  z-index: -1;
+  filter: hue-rotate(15deg);
+  animation: coffee-shift 12s linear 0s infinite;
+}
+
+#ocean {
+  z-index: -2;
+  position: fixed;
+  max-width: 100%;
+  filter: hue-rotate(0deg) opacity(50%);
+  animation: ocean-shift 12s linear 0s infinite;
+}
+
+
+@keyframes coffee-shift {
+  0% {filter: hue-rotate(15deg);}
+  25% {filter: hue-rotate(105deg);}
+  50% {filter: hue-rotate(195deg);}
+  75% {filter: hue-rotate(285deg);}
+  100% {filter: hue-rotate(15deg);}
+}
+
+@keyframes ocean-shift {
+  0% {filter: hue-rotate(0deg) opacity(50%);}
+  25% {filter: hue-rotate(90deg) opacity(50%);}
+  50% {filter: hue-rotate(180deg) opacity(50%);}
+  75% {filter: hue-rotate(270deg) opacity(50%);}
+  100% {filter: hue-rotate(0deg) opacity(50%);}
 }
 
 .subsection {
