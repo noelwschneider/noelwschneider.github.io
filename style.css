@@ -5,8 +5,9 @@ body {
   background-image: URL("https://cdn.pixabay.com/photo/2017/08/16/11/47/drawing-2647512_960_720.jpg");
   background-position: 500px 0px;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 1150px;
   background-attachment: fixed;
+  margin: 0;
 }
 
 h1 {
@@ -45,6 +46,7 @@ ul {
   margin-bottom: 1.5em;
 }
 
+
 header {
   width: 540px;
   margin-left: 10px;
@@ -53,6 +55,58 @@ header {
 
 figure {
   margin:0;
+  padding: 0px 0px 0px 0px;
+}
+
+label {
+  color: #000000;
+  font-size: 16px;
+  font-family: Georgia, Garamond, serif;
+  line-height: 0.3; 
+  margin-left: 12px;
+}
+
+select {
+  margin-bottom: 3px;
+}
+
+#sunglasses {
+  position: fixed;
+  top: 280px;
+  left: 750px;
+  z-index: -1; 
+  transform: rotate(25deg);
+  visibility: hidden;
+}
+
+#mustache {
+  position: fixed;
+  top: 425px;
+  left: 725px;
+  z-index: -1; 
+  transform: rotate(25deg);
+  visibility: hidden;
+}
+
+#thoughtBubble {
+  position: fixed;
+  top: 50px;
+  left: 1200px;
+  z-index: -1; 
+  visibility: hidden;
+}
+
+#thoughts {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 36px;
+  font-family: verdana;
+}
+
+#otterGlassesButton {
+  margin-left: 10px;
 }
 
 #coffee-cup {
@@ -62,6 +116,7 @@ figure {
   z-index: -1;
   filter: hue-rotate(15deg);
   animation: coffee-shift 12s linear 0s infinite;
+  animation-play-state: running;
 }
 
 #ocean {
@@ -70,8 +125,17 @@ figure {
   max-width: 100%;
   filter: hue-rotate(0deg) opacity(50%);
   animation: ocean-shift 12s linear 0s infinite;
+  animation-play-state: running;
 }
 
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding-left: 3px;
+  text-align: left;
+  font-size: 13px;
+  margin-left: 11px;
+}
 
 @keyframes coffee-shift {
   0% {filter: hue-rotate(15deg);}
