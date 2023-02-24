@@ -1,21 +1,4 @@
-const twinsLineup = {
-  nobody: {
-    name: '-',
-    age: '-',
-    games: '-',
-    hits: '-',
-    homeRuns: '-',
-    runsBattedIn: '-',
-    stolenBases: '-',
-    walks: '-',
-    strikeouts: '-',
-    battingAverage: '-',
-    onBasePercentage: '-',
-    sluggingPercentage: '-',
-    OPS: '-',
-    WAR: '-',
-  },
-  
+const twinsLineup = {  
   catcher: {
     name: 'Gary Sanchez',
     age: 29,
@@ -30,7 +13,7 @@ const twinsLineup = {
     onBasePercentage: '.282',
     sluggingPercentage: '.377',
     OPS: '.659',
-    WAR: 1.1,
+    WAR: 1.1
   },
   
    firstBase: {
@@ -47,7 +30,7 @@ const twinsLineup = {
     onBasePercentage: '.325',
     sluggingPercentage: '.426',
     OPS: '.751',
-    WAR: 1.7,
+    WAR: 1.7
   },
   
   secondBase: {
@@ -64,7 +47,7 @@ const twinsLineup = {
     onBasePercentage: '.346',
     sluggingPercentage: '.405',
     OPS: '.751',
-    WAR: 3.0,
+    WAR: 3.0
   },
   
   thirdBase: {
@@ -81,7 +64,7 @@ const twinsLineup = {
     onBasePercentage: '.338',
     sluggingPercentage: '.429',
     OPS: '.767',
-    WAR: 2.8,
+    WAR: 2.8
   },
   
   shortstop: {
@@ -98,7 +81,7 @@ const twinsLineup = {
     onBasePercentage: '.366',
     sluggingPercentage: '.467',
     OPS: '.834',
-    WAR: 5.2,
+    WAR: 5.2
   },
   
   leftField: {
@@ -115,7 +98,7 @@ const twinsLineup = {
     onBasePercentage: '.316',
     sluggingPercentage: '.427',
     OPS: '.743',
-    WAR: 2.4,
+    WAR: 2.4
   },
   
   centerField: {
@@ -132,7 +115,7 @@ const twinsLineup = {
     onBasePercentage: '.306',
     sluggingPercentage: '.526',
     OPS: '.833',
-    WAR: 3.2,
+    WAR: 3.2
   },
   
   rightField: {
@@ -149,7 +132,7 @@ const twinsLineup = {
     onBasePercentage: '.318',
     sluggingPercentage: '.348',
     OPS: '.666',
-    WAR: 1.3,
+    WAR: 1.3
   },
   
     designatedHitter: {
@@ -166,9 +149,9 @@ const twinsLineup = {
     onBasePercentage: '.375',
     sluggingPercentage: '.420',
     OPS: '.795',
-    WAR: 3.8,
-  },
-};
+    WAR: 3.8
+  }
+}
 
 function fillTable() {
   let selection = document.getElementById("goTwins").value;
@@ -186,7 +169,7 @@ function fillTable() {
     document.getElementById("sluggingPercentage").innerHTML = twinsLineup[selection].sluggingPercentage;
     document.getElementById("OPS").innerHTML = twinsLineup[selection].OPS;
     document.getElementById("WAR").innerHTML = twinsLineup[selection].WAR;
-};
+}
 
 function giveItGlasses() {
   if(document.getElementById("otterGlassesButton").innerHTML === "Give the otter sunglasses") {
@@ -218,9 +201,20 @@ function giveItAnxiety() {
   }
 }
 
-fillTable();
+function wordCounter() {
+  let text = document.getElementById("textBox").value;
+  let words = 0;
+  const splitted = text.split(" ");
+  for(let i=0; i<splitted.length; i++) {
+    if(splitted[i] !=="") {
+      words += 1;
+    }
+  }
+  document.getElementById("wordCount").innerHTML = "Word count: " + words;
+}
+
 document.getElementById("goTwins").addEventListener("change", fillTable);
 document.getElementById("otterGlassesButton").addEventListener("click", giveItGlasses);
 document.getElementById("otterMustacheButton").addEventListener("click", giveItAMustache);
 document.getElementById("otterAnxietyButton").addEventListener("click", giveItAnxiety);
-
+document.getElementById("textBox").addEventListener("input", wordCounter);
