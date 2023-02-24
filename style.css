@@ -1,7 +1,6 @@
 body {
   color: #000000;
-  background-color: #f9f9f9;
-  white-space: nowrap;
+  background-color: #f9f9f9; /* Included in case any issues with otter or ocean images */
   background-image: URL("https://cdn.pixabay.com/photo/2017/08/16/11/47/drawing-2647512_960_720.jpg");
   background-position: 500px 0px;
   background-repeat: no-repeat;
@@ -14,21 +13,23 @@ h1 {
   font-size: 36px;
   font-family: Helvetica, Verdana, sans-serif;
   line-height: 0.5;
+  padding-left: 12px;
+  padding-top: 18px;
+  margin: 0;
 }
 
 h2 {
   font-size: 30px;
   font-family: Helvetica, Verdana, sans-serif;
   line-height: 0.5;
-  margin-left: 12px;
+  padding-left: 12px;
 }
 
 h3 {
   font-size: 20px;
   font-family: Calibri, Helvetica, sans-serif;
   line-height: 0.5;
-  margin-left: 12px;
-  margin-top: 1.5em;
+  padding-left: 12px;
 }
 
 p {
@@ -36,22 +37,14 @@ p {
   font-size: 16px;
   font-family: Georgia, Garamond, serif;
   line-height: 0.3; 
-  margin-left: 12px;
+  padding-left: 12px;
 }
 
 ul {
   color: #000000;
   font-size: 16px;
   font-family: Georgia, Garamond, serif;
-  margin-bottom: 1.5em;
 }
-
-
-header {
-  width: 540px;
-  margin-left: 10px;
-  padding-top: 3px;
-} 
 
 figure {
   margin:0;
@@ -109,9 +102,17 @@ select {
   margin-left: 10px;
 }
 
+#textBox {
+  display: block;
+  margin-left: 12px;
+  margin-top: 10px;
+  width: 520px;
+  height: 150px;
+}
+
 #coffee-cup {
   position: absolute;
-  top: 290px;
+  top: 245px;
   left: 350px;
   z-index: -1;
   filter: hue-rotate(15deg);
@@ -125,7 +126,7 @@ select {
   max-width: 100%;
   filter: hue-rotate(0deg) opacity(50%);
   animation: ocean-shift 12s linear 0s infinite;
-  animation-play-state: running;
+  animation-play-state: paused;
 }
 
 table, th, td {
@@ -134,7 +135,7 @@ table, th, td {
   padding-left: 3px;
   text-align: left;
   font-size: 13px;
-  margin-left: 11px;
+  margin-left: 12px;
 }
 
 @keyframes coffee-shift {
@@ -154,7 +155,5 @@ table, th, td {
 }
 
 .subsection {
-  margin-bottom: 3em;
+  margin-bottom: 2em;
 }
-
-
