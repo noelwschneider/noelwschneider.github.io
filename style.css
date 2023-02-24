@@ -96,6 +96,7 @@ select {
   transform: translate(-50%, -50%);
   font-size: 36px;
   font-family: verdana;
+  line-height: 1em;
 }
 
 #otterGlassesButton {
