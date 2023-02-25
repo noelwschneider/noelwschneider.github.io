@@ -191,13 +191,13 @@ function giveItAMustache() {
   }
 }
 
-function giveItAnxiety() {
-  if(document.getElementById("otterAnxietyButton").innerHTML === "Give the otter anxiety") {
+function worryIt() {
+  if(document.getElementById("otterWorryButton").innerHTML === "Worry the otter") {
     document.getElementById("thoughtBubble").style.visibility = "visible";
-    document.getElementById("otterAnxietyButton").innerHTML = "Stifle the anxiety";
+    document.getElementById("otterWorryButton").innerHTML = "Relieve the otter";
   } else {
     document.getElementById("thoughtBubble").style.visibility = "hidden";
-    document.getElementById("otterAnxietyButton").innerHTML = "Give the otter anxiety";
+    document.getElementById("otterWorryButton").innerHTML = "Worry the otter";
   }
 }
 
@@ -216,5 +216,5 @@ function wordCounter() {
 document.getElementById("goTwins").addEventListener("change", fillTable);
 document.getElementById("otterGlassesButton").addEventListener("click", giveItGlasses);
 document.getElementById("otterMustacheButton").addEventListener("click", giveItAMustache);
-document.getElementById("otterAnxietyButton").addEventListener("click", giveItAnxiety);
+document.getElementById("otterWorryButton").addEventListener("click", worryIt);
 document.getElementById("textBox").addEventListener("input", wordCounter);
