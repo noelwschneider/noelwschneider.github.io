@@ -1,7 +1,152 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
+  
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css"/>
+  <title>Noel Schneider</title>
+</head>  
+  
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+  <!-- Images used in body --->
+  <figure id="coffee-cup">
+    <img src="https://cdn.pixabay.com/photo/2022/09/08/17/15/cafe-7441426_960_720.png" height="210" width="210" alt="A drawing of coffee.">
+  </figure>
+    
+  <figure id="sunglasses">
+    <img src="https://cdn.pixabay.com/photo/2014/04/02/10/20/sun-glasses-303511_960_720.png" width="400" height="200" alt="Sunglasses.">
+  </figure>
+    
+  <figure id="mustache">
+    <img src="https://cdn.pixabay.com/photo/2013/07/13/13/40/mustache-161330_960_720.png" width="350" height="175" alt="A mustache.">
+  </figure>
+  
+  <!-- Paragraph in container with thought bubble for easier formatting --->
+  <div id="thoughtBubble">
+  <figure id="bubble">
+    <img src="https://cdn.pixabay.com/photo/2014/04/02/10/56/cloud-304979_960_720.png" width="566" height="350" alt="A thought bubble reading 'Did I leave the oven on?'">
+  </figure>
+  <p id="thoughts">Did I leave the oven on?</p>
+  </div>
+    
+  <figure id="ocean">
+    <img src="https://media0.giphy.com/media/6dvXjuqgpgSJywBnNw/giphy.gif?cid=ecf05e47slvtcaqj5ld2yhmjhrehdd8m5bntlkllmymo9ob3&rid=giphy.gif&ct=g" width="552" height="981">
+  </figure>
+       
+  <header>
+    <h1>Noel Schneider</h1>
+  </header>
+
+  <!-- Beginning of resume --->
+  <section class="subsection">
+    <h2>Education</h2>
+    <figure>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/University_of_Missouri_logo.svg/1200px-University_of_Missouri_logo.svg.png" alt="Mizzou logo" width=46 style="float:left; padding: 0px 12px 0px 12px">
+    </figure>
+    <p>BA in English</p>
+    <p>University of Missouri</p>
+    <p>Graduated in 2017</p>
+  </section>
+
+  <section class="subsection">
+    <h2>Professional Experience</h2>
+    <h3>Executive Assistant</h3>
+    <p><em>SilverOak Wealth Management (June 2022 - December 2022)</em></p>
+    <ul>
+      <li>Managed schedule for the company president</li>
+      <li>Prepared materials for meetings</li>
+    </ul>
+    
+    <h3>Administrative Assistant</h3>
+    <p><em>CHESS, Inc. (April 2019 - June 2022)</em></p>
+    <ul>
+      <li>Managed calendars for company leadership</li>
+      <li>Reviewed, prepared, and delivered client materials</li>
+    </ul>
+
+    <h3>Student Assistant</h3>
+    <p><em>Mizzou Athletics Strategic Communications (August 2015 - May 2017)</em></p>
+    <ul>
+      <li>Assisted communications team at live events</li>
+      <li>Wrote features and game recaps for web and print</li>
+    </ul>
+  </section>
+    
+  <!-- Beginning of widgets --->
+  <section class="subsection">
+    <h2>Interests</h2>
+    <h3>Sports</h3>
+    <!-- Twins lineup widget --->
+    <form>
+      <label for="goTwins">For the Twins 2022 starter and stats, select a position: </label>
+      <select name="goTwins" id="goTwins">
+        <option value="" disabled selected hidden>-select-</option>
+        <option value="catcher">Catcher</option>
+        <option value="firstBase">First Base</option>
+        <option value="secondBase">Second Base</option>
+        <option value="thirdBase">Third Base</option>
+        <option value="shortstop">Shortstop</option>
+        <option value="leftField">Left Field</option>
+        <option value="centerField">Center Field</option>
+        <option value="rightField">Right Field</option>
+        <option value="designatedHitter">Designated Hitter</option>
+      </select>
+    </form>
+    
+    <table>
+      <colgroup>
+        <col span="1" style="width: 80px">
+        <col span="13" style="width: 35px; text-align: center">
+      </colgroup>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>G</th>
+        <th>H</th>
+        <th>HR</th>
+        <th>RBI</th>
+        <th>SB</th>
+        <th>BB</th>
+        <th>SO</th>
+        <th>AVG</th>
+        <th>OBP</th>
+        <th>SLG</th>
+        <th>OPS</th>
+        <th>WAR</th>
+      </tr>
+      <tr>
+        <td id="name">-</td>
+        <td id="age">-</td>
+        <td id="games">-</td>
+        <td id="hits">-</td>
+        <td id="homeRuns">-</td>
+        <td id="runsBattedIn">-</td>
+        <td id="stolenBases">-</td>
+        <td id="walks">-</td>
+        <td id="strikeouts">-</td>
+        <td id="battingAverage">-</td>
+        <td id="onBasePercentage">-</td>
+        <td id="sluggingPercentage">-</td>
+        <td id="OPS">-</td>
+        <td id="WAR">-</td>
+      </tr>
+    </table>
+      
+    <!-- Otter image widget --->
+    <h3>Animals</h3>
+    <button type="button" id="otterGlassesButton">Give the otter sunglasses</button>
+    <button type="button" id="otterMustacheButton">Give the otter a mustache</button>
+    <button type="button" id="otterWorryButton">Worry the otter</button>
+      
+    <!-- Word count widget --->
+    <h3>Writing</h3>
+    <label>Write your masterpiece here:</label>
+    <textarea id="textBox" name="textBox"></textarea>
+    <p id="wordCount">Word count: 0</p>    
+  </section>
+    
+  <!-- link to javascript file --->
+  <script src="myScript.js"></script>
 </body>
+  
 </html>
