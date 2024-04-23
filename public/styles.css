@@ -1,0 +1,145 @@
+:root {
+  /* size */
+  --base: 18px;
+
+  /* typography */
+  --sans-font: 'Trebuchet MS', serif;
+  --serif-font: 'Cochin', serif;
+  --mono-font: 'Menlo', monospace;
+  --base-font: var(--sans-font);
+
+  /* color */
+  --emphasis: rgb(192, 141, 23);
+  --emphasis-fill: color-mix(in srgb, var(--emphasis) 62%, black);
+  --on-emphasis: #000;
+
+  /* neutral backgrounds */
+  --surface: rgb(18, 18, 18);
+  --surface-dark: color-mix(in srgb, var(--surface) 62%, black);
+  --surface-light: color-mix(in srgb, var(--surface) 62%, white);
+  --on-surface: rgb(224, 224, 224);
+  --on-surface-variant: rgb(0, 0, 0);
+
+  --outline: rgb(100, 100, 100);
+
+  --error: #fff;
+  --on-error: #fff;
+  --error-fill: #fff;
+  --on-error: #fff;
+
+  --link: cornflowerblue;
+
+  --radius: calc(var(--base) * pow(1.613, -1));
+
+  font-size: var(--base);
+  color: var(--on-surface);
+}
+
+a {
+  color: var(--link);
+}
+
+html, body {
+  font-size: var(--base);
+  font-family: var(--base-font);
+  background-color: var(--surface);
+  color: var(--on-surface);
+  margin: 0px;
+}
+
+
+
+h1, h2, h3 {
+  font-family: var(--sans-font);
+  color: var(--on-surface);
+}
+
+h1 {
+  font-size: calc(var(--base) * pow(1.613, 2));
+}
+
+h2 {
+  font-size: calc(var(--base) * pow(1.613, 1));;
+}
+
+h3 {
+  font-size: calc(var(--base) * pow(1.613, 0));
+}
+
+h3, body, p, li {
+  font-size: var(--base);
+}
+
+caption {
+  font-size: calc(var(--base) * pow(1.613, -1));
+}
+
+small {
+  font-size: calc(var(--base) * pow(1.613, -2));
+}
+
+hr {
+  margin: var(--base);
+  border-bottom-color: var(--outline);
+}
+
+table {
+  background-color: var(--surface-subtle);
+  color: var(--on-surface);
+  border: 1px solid var(--outline);
+  border-spacing: var(--base);
+}
+
+table, th, td {
+  text-align: left;
+  border-radius: var(--radius);
+}
+
+th {
+  color: var(--emphasis);
+}
+
+code {
+  font-family: var(--mono-font);
+  background-color: var(--surface-light);
+  color: var(--on-surface-variant);
+  padding: 0px 0.25rem;
+}
+
+svg {
+  width: calc(var(--base) * pow(1.613, 2));
+  height: calc(var(--base) * pow(1.613, 2));
+  /* fill: none; */
+  fill: var(--surface-subtle);
+  stroke: var(--emphasis);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.header {
+  background-color: var(--surface-dark);
+  color: var(--on-surface);
+  
+  padding: 1rem;
+  border-bottom: 1px solid var(--outline);
+  text-align: center;
+}
+
+.content {
+  padding: 0px 1rem;
+}
+
+.title {
+  font-size: calc(var(--base) * pow(1.613, 3));
+  font-family: var(--serif-font);
+}
+
+.emphasis {
+  color: var(--emphasis);
+}
+
+#palettes-table tbody tr td {
+  height: 50px;
+  width: 50px;
+}

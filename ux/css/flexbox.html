@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="/public/styles.css"/>
+  <script src="/public/script.js" defer></script>
+  <title>Document</title>
+</head>
+<body>
+  <div id="navbar" class="header"></div>
+
+  <div class="content">
+    <h1>Flexbox</h1>
+
+    <h2>Parent properties</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>property</th>
+          <th>description</th>
+          <th>values <em>(first == default)</em></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>display</td>
+          <td>defines a flex container</td>
+          <td><code>flex</code></td>
+        </tr>
+        <tr>
+          <td>flex-direction</td>
+          <td>sets the main axis</td>
+          <td><code>row</code>, <code>column</code>, <code>row-reverse</code>, <code>column-reverse</code></td>
+        </tr>
+        <tr>
+          <td>flex-wrap</td>
+          <td></td>
+          <td><code>nowrap</code>, <code>wrap</code>, <code>wrap-reverse</code></td>
+        </tr>
+        <tr>
+          <td>justify-content</td>
+          <td>set alignment on main axis</td>
+          <td><code>flex-start</code>, <code>flex-end</code>, <code>center</code>, <code>space-between</code>, <code>space-around</code>, <code>space-evenly</code></td>
+        </tr>
+        <tr>
+          <td>align-items</td>
+          <td>set alignment on cross axis</td>
+          <td><code>flex-start</code>, <code>flex-end</code>, <code>center</code>, <code>stretch</code>, <code>baseline</code></td>
+        </tr>
+        <tr>
+          <td>align-content</td>
+          <td>set alignment for wrapped flex items</td>
+          <td><code>normal</code>, <code>flex-start</code>, <code>flex-end</code>, <code>center</code>, <code>stretch</code>, <code>space-between</code>, <code>space-around</code></td>
+        </tr>
+        <tr>
+          <td>row-gap</td>
+          <td>minimum gutter between rows of flex-items</td>
+          <td><em>size</em></td>
+        </tr>
+        <tr>
+          <td>column-gap</td>
+          <td>minimum gutter between columns of flex-items</td>
+          <td><em>size</em></td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Aggregate properties</p>
+    <ul>
+      <li>
+        <code>flex-flow</code> = <code>flex-direction</code> + <code>flex-wrap</code>
+      </li>
+      <li>
+        <code>gap</code> = <code>row-gap</code> + <code>column-gap</code>
+      </li>
+    </ul>
+
+    <table>
+      <thead>
+        <tr>
+          <th>property</th>
+          <th>description</th>
+          <th>values <em>(first == default)</em></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>order</td>
+          <td>where the item is ordered in its container</td>
+          <td><em>number</em></td>
+        </tr>
+        <tr>
+          <td>flex-grow</td>
+          <td>proportion of available space in parent container allocated to child</td>
+          <td><em>number</em></td>
+        </tr>
+        <tr>
+          <td>flex-shrink</td>
+          <td>proportion of overflow space in parent container to remove from child</td>
+          <td><em>number</em></td>
+        </tr>
+        <tr>
+          <td>flex-basis</td>
+          <td>default size of child before available space is allocated (or overflow space is removed)</td>
+          <td><em>size</em></td>
+        </tr>
+        <tr>
+          <td>align-self</td>
+          <td>override parent's <em>align-items</em> value</td>
+          <td><code>flex-start</code>, <code>flex-end</code>, <code>center</code>, <code>stretch</code>, <code>baseline</code></td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Aggregate properties:</p>
+    <ul>
+      <li><code>flex</code> = <code>flex-grow</code> + <code>flex-shrink</code> + <code>flex-basis</code></li>
+    </ul>
+  </div>
+</body>
+</html>
